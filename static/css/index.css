@@ -155,3 +155,57 @@ body {
   border-radius: 12px;
   overflow: hidden;
 }
+
+/* simple two-up video pager */
+.video-pager {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.video-pager .videos-page {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-pager .is-hidden {
+  display: none;
+}
+
+.video-pager .pager-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.video-pager .pager-btn.left {
+  left: -10px;
+}
+
+.video-pager .pager-btn.right {
+  right: -10px;
+}
+
+/* responsive: single-column per page on mobile */
+@media (max-width: 768px) {
+  .video-pager .videos-page {
+    flex-direction: column;
+  }
+
+  .video-pager .videos-page video[width="45%"],
+  .video-pager .videos-page video[width="70%"] {
+    width: 100% !important;
+  }
+}
