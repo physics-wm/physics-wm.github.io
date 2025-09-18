@@ -156,6 +156,51 @@ body {
   overflow: hidden;
 }
 
+/* pagination position: push dots below the carousel, between video and captions */
+.results-carousel .slider-pagination {
+  position: static !important;
+  margin-top: 0.5rem;
+
+}
+
+/* wrappers for background bands */
+.band-gray {
+  background-color: #dbdddf;
+  border-radius: 10px;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  margin-bottom: -1.5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.band-white {
+  background-color: #fffdfd71;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 10px;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.band-gray-2 {
+  background-color: #dbdddf;
+  border-radius: 10px;
+  padding: 1rem 0.5rem 0rem 0.5rem;
+  margin-bottom: -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+#baseline-carousel .item,
+#softmask-carousel .item,
+#hardmask-carousel .item {
+  margin: 0 3px;
+}
+
+.results-carousel .slider-navigation-previous,
+.results-carousel .slider-navigation-next {
+  top: 75% !important;
+}
+
 /* simple two-up video pager */
 .video-pager {
   position: relative;
