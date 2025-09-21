@@ -253,4 +253,77 @@ body {
   .video-pager .videos-page video[width="70%"] {
     width: 100% !important;
   }
+
+  /* Fix carousel videos on mobile */
+  .results-carousel {
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .results-carousel .item {
+    margin: 2px;
+    max-width: 100%;
+  }
+
+  .results-carousel video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  /* Ensure carousel containers don't overflow */
+  #baseline-carousel,
+  #softmask-carousel,
+  #hardmask-carousel {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* Adjust band containers for mobile */
+  .band-gray,
+  .band-white,
+  .band-gray-2 {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Make main video responsive too */
+  .rounded-video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  /* Prevent horizontal overflow on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Make TL;DR section more mobile-friendly */
+  .box > div {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .box .fas.fa-lightbulb {
+    align-self: center;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Adjust font sizes for mobile */
+  .is-size-4 {
+    font-size: 1.2rem !important;
+  }
+
+  .is-size-5 {
+    font-size: 1rem !important;
+  }
 }
