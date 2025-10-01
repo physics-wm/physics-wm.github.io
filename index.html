@@ -22,7 +22,8 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -114,6 +115,16 @@
                     </span>
                     <span>Data</span>
                   </a>
+                </span>
+                <span class="link-block">
+                  <a href="#podcast-section"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-solid fa-headphones"></i>
+                    </span>
+                    <span>Podcast</span>
+                  </a>
+                </span>
               </div>
 
             </div>
@@ -123,33 +134,24 @@
     </div>
   </section>
 
-  <section class="hero teaser" style="margin-top: 3rem;"> <!-- center aligned teaser image, remove translateX -->
+  <section class="columns is-centered has-text-centered"> <!-- center aligned teaser image, remove translateX -->
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <h2 class="title has-text-centered" style="font-weight: 800; margin-bottom: 2.5rem;">Typical Problems in World Models and our solution comparison</h2>
-        <img src="./static/images/teaser.png" class="teaser-image" />
-        <!-- You can also add a video as a teaser -->
-        <!--
-    <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/images/teaser.jpg"
-                type="video/mp4">
-    </video> 
-    -->
-      </div>
+        <h2 class="title is-4">Typical Problems in World Models and our solution comparison</h2>
+        <img src="./static/images/teaser.jpg" class="teaser-image" />
     </div>
   </section>
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-full">
           <div class="box"
-            style="display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2);">
+            style="display: flex; align-items: center; width: 100%; justify-content: center; text-align: center; padding: 1.5rem; border-radius: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.2);">
             <!-- Tagline container -->
             <div style="display: flex; align-items: center; gap: 1rem;">
               <i class="fas fa-lightbulb" style="font-size: 2rem; color: #FFD700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
               <p class="is-size-4" style="margin: 0; color: white; font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.3); line-height: 1.4;">
-                <span style="font-size: 1.1em; font-weight: 700; color: #FFD700;">TL;DR</span>: PIWM is a lightweight, <b>physics‑informed</b> generative model that <b>predicts future images</b>
+                <span style="font-size: 1.0em; font-weight: 700; color: #FFD700;">TL;DR</span>: PIWM is a lightweight, <b>physics‑informed</b> generative model that <b>predicts future images</b>
                 from the current image and <b>actions</b> — enabling forecasting with strong existential and temporal
                 consistency in dynamic environments.
               </p>
@@ -164,9 +166,9 @@
         </div>
 
         <div class="columns is-centered">
-          <div class="column is-two-thirds">
+          <div class="column is-full">
             <div class="box"
-              style="display: flex; align-items: flex-start; text-align: left; padding: 1.5rem; border-radius: 10px; background-color: #e8f4fd; margin-bottom: 0.5rem;">
+              style="display: flex; align-items: flex-start; width: 80%; text-align: left; padding: 1rem; border-radius: 10px; background-color: #e8f4fd; margin: 0 auto 0.5rem auto;">
               <!-- Note container above video -->
               <span style="font-weight: bold; margin-right: 1rem;"></span>
               <p class="is-size-5" style="margin: 0; text-align: center; flex: 1; color: #f15525c0;">
@@ -319,7 +321,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-4">Abstract</h2>
           <div class="content has-text-justified">
             <p>
               A major challenge in deploying world models is the trade-off between size and performance. Large world models can capture rich physical dynamics but require massive computing resources, making them impractical for edge devices. Small world models are easier to deploy but often struggle to learn accurate physics, leading to poor predictions. To address this, we propose the Physics-Informed BEV World Model (PIWM), a compact model designed to efficiently capture physical interactions in bird’s-eye-view (BEV) representations. PIWM incorporates a Soft Mask mechanism during training to improve dynamic object modeling and future prediction. We also introduce a simple yet effective inference technique called Warm Start, which enhances prediction quality even in zero-shot settings. Experiments demonstrate that, at the same parameter scale (400M), PIWM surpasses the baseline by 60.6% in weighted overall score. Moreover, even when compared to the largest baseline model (400M), the smallest PIWM variant (130M with Soft Mask) achieves a 7.4% higher weighted overall score while delivering 28% faster inference speed.
@@ -327,12 +329,24 @@
           </div>
         </div>
       </div>
-      <!--/ Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4" id="podcast-section">Podcast</h2>
+          <div class="content">
+            <p>On a run and want to get a gist of our paper? Listen to the following podcast!</p>
+            <audio controls src="static/podcast/podcast.mp4" style="display: block; margin: 0.75rem auto; width: 100%; max-width: 720px;">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
 
-      <section class="hero teaser" style="margin-top: 2.5rem;"> <!-- add spacing from Abstract -->
+    </div>
+
+      <section class="columns is-centered has-text-centered"> <!-- add spacing from Abstract -->
         <div class="container is-max-desktop">
           <div class="hero-body">
-            <h2 class="title has-text-centered" style="font-weight: 800; margin-bottom: 1rem;">What is Soft Mask?</h2>
+            <h2 class="title is-4">What is Soft Mask?</h2>
             <img src="./static/images/mask_view.png" class="teaser-image" style="margin: 2.5rem 0;" />
             <!-- add gap before viewer -->
             <div class="box" style="padding: 1rem 1rem 0.75rem 1rem; border-radius: 10px; background-color: #dbdddf;">
@@ -402,7 +416,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
-          <h2 class="title is-3">Why human subjective ratings matter? </h2>
+          <h2 class="title is-4">Why human subjective ratings matter? </h2>
           <div class="content has-text-justified">
             <p>
               Check out what the Genie 3 creators say in interview, <b>timestamp 25:25: How Do You Measure the Quality
@@ -425,7 +439,7 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
           <div class="item item-video0 has-text-centered">
-            <h3 class="title is-3">Try it for yourself</h3>
+            <h3 class="title is-4">Try it for yourself</h3>
             <video poster="" id="video0" autoplay controls muted loop playsinline center width="70%"> -->
   <!-- Your video file here -->
   <!-- <source src="./static/videos/higher_quality_mode.mp4"
